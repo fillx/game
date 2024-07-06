@@ -4,11 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="debug-console.css">
   <!-- Start loading assets right away, to have them (partly) loaded already when they are requested -->
-  <link rel="preload" href="Build//a30e0fc48d13597d0e5928fd5e4f1c49.data.br" as="fetch" type="application/octet-stream" crossorigin>
-  <link rel="preload" href="Build/06e7ae16f98a890dafb00f820757df8e.framework.js.br" as="script">
-  <link rel="preload" href="Build/94b46040c1f3c59ea48de77e2b489e1e.wasm.br" as="fetch" type="application/wasm" crossorigin>
+  <link rel="preload" href="Build//b881d9f8ad525ebf314dea982c8644cc.data.br" as="fetch" type="application/octet-stream" crossorigin>
+  <link rel="preload" href="Build/5de2f0e546cd18d8e1670fa227025f48.framework.js.br" as="script">
+  <link rel="preload" href="Build/17574188978826f4d4f071abfb0375cb.wasm.br" as="fetch" type="application/wasm" crossorigin>
   <title>WebLoadingTest</title>
   <style>
     * {
@@ -124,14 +123,14 @@
       <div id="unity-loading-bar-inner"></div>
     </div>
   </div>
-  <script src="Build/aa2d20f64bb480991e0cc97fe9d5a2c9.loader.js"></script>
+  <script src="Build/bbd22d086234c691a4d3456e69f3eaf7.loader.js"></script>
   <script>
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/aa2d20f64bb480991e0cc97fe9d5a2c9.loader.js";
+    var loaderUrl = buildUrl + "/bbd22d086234c691a4d3456e69f3eaf7.loader.js";
     var config = {
-      dataUrl: buildUrl + "/a30e0fc48d13597d0e5928fd5e4f1c49.data.br",
-      frameworkUrl: buildUrl + "/06e7ae16f98a890dafb00f820757df8e.framework.js.br",
-      codeUrl: buildUrl + "/94b46040c1f3c59ea48de77e2b489e1e.wasm.br",
+      dataUrl: buildUrl + "/b881d9f8ad525ebf314dea982c8644cc.data.br",
+      frameworkUrl: buildUrl + "/5de2f0e546cd18d8e1670fa227025f48.framework.js.br",
+      codeUrl: buildUrl + "/17574188978826f4d4f071abfb0375cb.wasm.br",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "JohannesDeml",
       productName: "WebLoadingTest",
@@ -149,7 +148,7 @@
     var loadingContainer = document.querySelector("#unity-loading-container");
     var loadingBar = document.querySelector("#unity-loading-bar-inner");
 
-    var unityGame; // This variable can be used to access the application with .SendMessage() commands
+    var unityGame;
     var script = document.createElement("script");
     script.src = loaderUrl;
     script.onload = function() {
@@ -164,8 +163,7 @@
     };
     document.body.appendChild(script);
   </script>
-  <!-- Add an html debug console and handle unity rich text styling for both html and browser console-->
-  <script src="./debug-console.js"></script>
+  <!-- Parse Unity rich text to render stylized browser console logs -->
+  <script src="./pretty-console.js"></script>
 </body>
-
 </html>
